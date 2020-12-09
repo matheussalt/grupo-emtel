@@ -30,8 +30,10 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="<?=get_template_directory_URI()?>/style.css">
+
   <?php wp_head(); ?>
-  <?php include "funcoesSalt.php";  ?>
 
 </head>
 
@@ -50,7 +52,17 @@
   </script>
 
   <header class="header">
-    <div>
-      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+    <div class="container">
+      <a href="<?=site_url()?>" class="header-logo">
+        <img src="<?=get_template_directory_URI()?>/img/src/logo.png" alt="Logotipo Grupo Emtel">
+      </a>
+
+      <nav>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuTopo', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+      </nav>
+
+      <div class="menu-hamb" data-menu="button">
+        <span></span>
+      </div>
     </div>
   </header>
