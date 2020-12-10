@@ -14,6 +14,10 @@
   flex-direction: column;
   align-items: flex-end;
 
+  h2 {
+    text-align: right;
+  }
+
   p {
     margin: 8px 0 16px;
     text-align: right;
@@ -22,8 +26,27 @@
 
 .home-about-video {
   width: 100%;
+  display: flex;
+  align-items: center;
 
   img {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home-about .container {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .home-about {
+    padding: 128px 0;
+
+    .container {
+      gap: 64px;
+    }
   }
 }

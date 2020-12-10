@@ -16,7 +16,7 @@
       <div class="container">
         <h2>Contato</h2>
 
-        <? echo do_shortcode('[contact-form-7 id="23" title="Form footer"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="23" title="Form footer"]'); ?>
       </div>
     </div>
 

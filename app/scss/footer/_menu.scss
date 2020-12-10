@@ -35,3 +35,10 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .footer-menu .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

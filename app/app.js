@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./app/style.scss\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_animacoes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/animacoes */ \"./app/js/animacoes.js\");\n/* harmony import */ var _js_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/menu */ \"./app/js/menu.js\");\n/* harmony import */ var _js_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/modal */ \"./app/js/modal.js\");\n/* harmony import */ var _js_modernizr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/modernizr */ \"./app/js/modernizr.js\");\n/* harmony import */ var _js_modernizr__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_modernizr__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\nObject(_js_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./app/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./app/style.scss\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_animacoes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/animacoes */ \"./app/js/animacoes.js\");\n/* harmony import */ var _js_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/menu */ \"./app/js/menu.js\");\n/* harmony import */ var _js_blog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/blog */ \"./app/js/blog.js\");\n/* harmony import */ var _js_modernizr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/modernizr */ \"./app/js/modernizr.js\");\n/* harmony import */ var _js_modernizr__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_modernizr__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\nObject(_js_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\nObject(_js_blog__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./app/index.js?");
 
 /***/ }),
 
@@ -110,6 +110,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./app/js/blog.js":
+/*!************************!*\
+  !*** ./app/js/blog.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return blog; });\nfunction blog() {\r\n  const blogWrapper = document.querySelector('.home-blog-wrapper');\r\n  const blogItemsArray = document.querySelectorAll('.blog-item');\r\n  const leftButtons = document.querySelectorAll('.blog-controls-left');\r\n  const rightButtons = document.querySelectorAll('.blog-controls-right');\r\n  let actualSlide = 0;\r\n\r\n  if (!blogWrapper) return null;\r\n\r\n  blogItemsArray[0].classList.add('ativo');\r\n\r\n  setHeight(blogWrapper, blogItemsArray);\r\n  window.addEventListener('resize', () => setHeight(blogWrapper, blogItemsArray));\r\n\r\n  leftButtons.forEach(button => {\r\n    button.addEventListener('click', e => {\r\n      if (actualSlide === 0) {\r\n        actualSlide = blogItemsArray.length - 1;\r\n        \r\n        setAndRemoveClass(blogItemsArray, blogItemsArray[actualSlide]);\r\n      } else {\r\n        actualSlide--;\r\n        \r\n        setAndRemoveClass(blogItemsArray, blogItemsArray[actualSlide]);\r\n      }\r\n    });\r\n  });\r\n\r\n  rightButtons.forEach(button => {\r\n    button.addEventListener('click', e => {\r\n      if (actualSlide === blogItemsArray.length - 1) {\r\n        actualSlide = 0;\r\n        \r\n        setAndRemoveClass(blogItemsArray, blogItemsArray[actualSlide]);\r\n      } else {\r\n        actualSlide++;\r\n        \r\n        setAndRemoveClass(blogItemsArray, blogItemsArray[actualSlide]);\r\n      }\r\n    });\r\n  });\r\n}\r\n\r\nfunction setHeight(blogWrapper, blogItemsArray) {\r\n  const blogHeight = Array.from(blogItemsArray).reduce((acc, item) => {    \r\n    if (item.clientHeight > acc) {\r\n      return item.clientHeight;\r\n    } else {\r\n      return acc;\r\n    }\r\n  }, 0);\r\n\r\n  blogWrapper.style.setProperty('height', `${blogHeight}px`)\r\n}\r\n\r\nfunction setAndRemoveClass(blogItemsArray, blogItem) {\r\n  blogItemsArray.forEach(item => {\r\n    item.classList.remove('ativo');\r\n  });\r\n\r\n  blogItem.classList.add('ativo');\r\n}\r\n\n\n//# sourceURL=webpack:///./app/js/blog.js?");
+
+/***/ }),
+
 /***/ "./app/js/menu.js":
 /*!************************!*\
   !*** ./app/js/menu.js ***!
@@ -119,18 +131,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return openMenu; });\nfunction openMenu() {\r\n  const header = document.querySelector('.header');\r\n  const menuHamb = document.querySelector('[data-menu=\"button\"]');\r\n  const menu = document.querySelector('[data-menu=\"menu\"]');\r\n\r\n  if (!menuHamb || !menu) return null;\r\n\r\n  menuHamb.addEventListener(\"click\", e => {\r\n    e.preventDefault();\r\n\r\n    menu.classList.toggle(\"ativo\");\r\n    menuHamb.classList.toggle(\"ativo\");\r\n  });\r\n\r\n  window.addEventListener('scroll', e => {\r\n    if (window.scrollY > 60) {\r\n      header.classList.add('scroll');\r\n    } else {\r\n      header.classList.remove('scroll');\r\n    }\r\n  });\r\n}\r\n\n\n//# sourceURL=webpack:///./app/js/menu.js?");
-
-/***/ }),
-
-/***/ "./app/js/modal.js":
-/*!*************************!*\
-  !*** ./app/js/modal.js ***!
-  \*************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return modal; });\nfunction modal() {\r\n  const imgArray = document.querySelectorAll(\"[data-modal]\");\r\n  const modal = document.querySelector(\"#modal\");\r\n  const body = document.querySelector(\"body\");\r\n\r\n  if (!imgArray) return null;\r\n\r\n  imgArray.forEach(img => {\r\n    img.addEventListener(\"click\", e => {\r\n      e.preventDefault();\r\n\r\n      body.style.setProperty(\"overflow-y\", \"hidden\");\r\n\r\n      modal.classList.add(\"ativo\");\r\n\r\n      const modalWrapper = document.createElement(\"div\");\r\n      s;\r\n      modalWrapper.innerHTML = `\r\n        <img src=\"${img.getAttribute(\"src\")}\" alt=\"${img.getAttribute(\r\n        \"alt\"\r\n      )}\" />\r\n      `;\r\n\r\n      const closeModal = document.createElement(\"button\");\r\n      closeModal.innerText = \"x\";\r\n      closeModal.addEventListener(\"click\", e => {\r\n        e.preventDefault();\r\n\r\n        body.style.setProperty(\"overflow-y\", \"scroll\");\r\n\r\n        modal.classList.remove(\"ativo\");\r\n        modal.innerHTML = \"\";\r\n      });\r\n\r\n      modalWrapper.appendChild(closeModal);\r\n      modal.appendChild(modalWrapper);\r\n\r\n      modal.addEventListener(\"click\", e => {\r\n        if (e.target === e.currentTarget) {\r\n          body.style.setProperty(\"overflow-y\", \"scroll\");\r\n\r\n          modal.classList.remove(\"ativo\");\r\n          modal.innerHTML = \"\";\r\n        }\r\n      });\r\n    });\r\n  });\r\n}\r\n\n\n//# sourceURL=webpack:///./app/js/modal.js?");
 
 /***/ }),
 

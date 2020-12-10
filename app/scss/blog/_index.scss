@@ -14,4 +14,11 @@
   gap: 32px;
 }
 
+@media screen and (min-width: 1050px) {
+  .blog-wrapper {
+    gap: 64px;
+  }
+}
+
 @import './outside';
+@import './inside';

@@ -12,6 +12,10 @@
     h2 {
       margin-bottom: 16px;
     }
+
+    > p {
+      max-width: 400px;
+    }
   }
 }
 
@@ -42,60 +46,87 @@
       color: #000;
     }
   }
+}
 
-  .home-group-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.home-group-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
-    img {
-      margin-bottom: 32px;
-      max-width: 200px;
-      max-height: 128px;
-    }
+  img {
+    margin-bottom: 32px;
+    max-width: 200px;
+    max-height: 128px;
+  }
 
-    h3 {
-      margin-bottom: 8px;
-      font-size: 32px;
-    }
+  h3 {
+    margin-bottom: 8px;
+    font-size: 32px;
+  }
 
-    p {
-      margin-bottom: 32px;
-      text-align: right;
-    }
+  p {
+    margin-bottom: 32px;
+    text-align: right;
+  }
+}
+
+.home-group-img {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 100vw;
+    height: 125%;
+    transform: translate(0, -50%);
+    background-color: #f6f6f6;
+    z-index: -1;
+  }
+
+  img {
+    width: 90%;
+    z-index: 1;
+  }
+
+  span {
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 64px;
+    font-weight: 900;
+    z-index: -1;
+    color: #2c2c2c;
+    opacity: 0.09;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home-group-wrapper {
+    margin-top: 128px;
+    gap: 128px;
+  }
+
+  .home-group-item {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .home-group {
+    padding: 128px 0;
   }
 
   .home-group-img {
-    position: relative;
-    width: 100%;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 10%;
-      top: 50%;
-      width: 100vw;
-      height: 125%;
-      transform: translate(0, -50%);
-      background-color: #f6f6f6;
-      z-index: -1;
-    }
-
-    img {
-      width: 90%;
-      z-index: 1;
-    }
-
     span {
-      position: absolute;
-      left: 70%;
-      top: 50%;
-      transform: translate(0, -50%);
-      font-size: 64px;
-      font-weight: 900;
-      z-index: -1;
-      color: #2c2c2c;
-      opacity: 0.09;
+      left: 90%;
+      font-size: 84px;
     }
   }
 }

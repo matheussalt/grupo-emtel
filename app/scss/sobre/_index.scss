@@ -99,3 +99,50 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .sobre,
+  .valores {
+    .container {
+      display: grid;
+      grid-template-columns: 50% 1fr;
+    }
+  }
+
+  .sobre-video {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      height: 80%;
+    }
+  }
+
+  .valores-img {
+    align-items: center;
+
+    &::before {
+      height: 80%;
+    }
+  }
+
+  .depoimentos {
+    padding: 64px 0;
+  }
+
+  .depoimentos-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .sobre .container {
+    grid-template-columns: 1fr 60%;
+  }
+
+  .valores .container {
+    grid-template-columns: 60% 1fr;
+  }
+}

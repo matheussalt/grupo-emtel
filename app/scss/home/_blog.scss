@@ -1,0 +1,64 @@
+.home-blog {
+  width: 100%;
+  padding: 64px 0;
+
+  .container {
+    h5 {
+      color: $blue;
+      letter-spacing: 0.3rem;
+      font-size: 11px;
+    }
+
+    h2 {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.home-blog-wrapper {
+  position: relative;
+  height: 400px;
+
+  .blog-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s opacity, 0.3s visibility;
+    transition-timing-function: ease-out;
+
+    &.ativo {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .blog-txt {
+    position: relative;
+  }
+}
+
+.blog-controls {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+
+  button {
+    width: 32px;
+    height: 32px;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 40%;
+      height: 40%;
+    }
+  }
+}

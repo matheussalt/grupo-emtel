@@ -2,6 +2,13 @@
   width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @import './formulario';
 @import './dados';
 @import './menu';

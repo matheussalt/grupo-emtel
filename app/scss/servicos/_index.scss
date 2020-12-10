@@ -44,3 +44,19 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .servicos .container {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+  }
+
+  .servicos-img {
+    height: 680px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

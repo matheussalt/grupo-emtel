@@ -78,3 +78,16 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .home-success-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .home-success {
+    padding: 128px 0 0;
+  }
+}

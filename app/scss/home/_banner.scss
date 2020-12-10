@@ -60,3 +60,56 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .home-banner {
+    min-height: 460px;
+    height: 600px;
+
+    .container {
+      padding: 64px 0 32px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .home-banner-txt {
+    margin: 32px 0 0;
+
+    h1 {
+      width: 290px;
+      font-size: 84px;
+
+      strong {
+        line-height: 84px;
+      }
+    }
+
+    p {
+      max-width: 360px;
+    }
+  }
+
+  .home-banner-midia {
+    flex-direction: column;
+
+    a {
+      padding: 8px;
+      display: block;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .home-banner {
+    max-height: 800px;
+    height: 100vh;
+  }
+}

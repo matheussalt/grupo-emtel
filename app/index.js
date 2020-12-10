@@ -1,7 +1,8 @@
 import './style.scss';
 import animacoes from './js/animacoes';
 import menu from './js/menu';
-import modal from './js/modal';
+import blog from './js/blog';
 import './js/modernizr';
 
 menu();
+blog();

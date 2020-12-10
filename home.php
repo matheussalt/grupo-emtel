@@ -230,22 +230,22 @@ get_header(); ?>
           </a>
           <p><?=custom_excerpt2(100)?></p>
 
-          <a href="<?=the_permalink()?>">Ler mais</a>
+          <a href="<?=the_permalink()?>" class="link">Ler mais</a>
+
+          <div class="blog-controls">
+            <button class="blog-controls-left" type="button">
+              <img src="<?=get_template_directory_URI()?>/img/src/arrow_left.png" alt="Voltar" />
+            </button>
+
+            <button class="blog-controls-right" type="button">
+              <img src="<?=get_template_directory_URI()?>/img/src/arrow_right.png" alt="Avançar" />
+            </button>
+          </div>
         </div>
       </div>
 
       <?php endwhile; ?>
       <?php endif; ?>
-
-      <div class="blog-controls">
-        <button class="blog-controls-left" type="button">
-          <img src="<?=get_template_directory_URI()?>/img/src/arrow_left.png" alt="Voltar" />
-        </button>
-
-        <button class="blog-controls-right" type="button">
-          <img src="<?=get_template_directory_URI()?>/img/src/arrow_right.png" alt="Avançar" />
-        </button>
-      </div>
     </div>
   </div>
 </section>

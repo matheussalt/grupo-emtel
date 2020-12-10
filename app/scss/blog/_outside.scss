@@ -41,3 +41,29 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .blog-item {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: flex-start;
+
+    .blog-txt {
+      padding: 48px 64px;
+    }
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .blog-item {
+    grid-template-columns: 55% 45%;
+
+    img {
+      height: 380px;
+    }
+
+    .blog-txt {
+      padding: 48px 64px;
+    }
+  }
+}
