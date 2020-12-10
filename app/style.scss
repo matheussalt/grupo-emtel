@@ -1,3 +1,7 @@
+$blue: #1f416d;
+$red: #ed1c24;
+$black: #2c2c2c;
+
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +9,10 @@
   outline: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'Lato', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ul,
@@ -25,12 +33,64 @@ li {
   line-height: 24px;
 }
 
+h2 {
+  color: $black;
+  font-size: 32px;
+  font-weight: 900;
+}
+
 .container {
   width: 90%;
   max-width: 1050px;
   margin: 0 auto;
 }
 
+.see-more {
+  position: relative;
+  display: inline-block;
+  max-width: 100px;
+  padding-left: 42px;
+  color: #fff;
+  font-weight: normal;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 32px;
+    height: 2px;
+    background-color: $red;
+    transform: translate(0, -50%);
+    transition: width 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover {
+    &::before {
+      width: 16px;
+    }
+  }
+}
+
+.button {
+  padding: 10px 32px;
+  border-radius: 6px;
+  border: 2px solid #0047ff;
+  color: #0047ff;
+  text-align: center;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #0047ff;
+    color: #fff;
+  }
+}
+
 @import './scss/header/header';
+@import './scss/home';
+@import './scss/sobre';
+@import './scss/servicos';
+@import './scss/blog';
 @import './scss/footer/footer';
 @import './animation';

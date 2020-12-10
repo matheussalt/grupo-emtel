@@ -1,0 +1,52 @@
+.footer-form {
+  width: 100%;
+  padding: 64px 0 16px;
+  background-color: $blue;
+
+  h2 {
+    margin-bottom: 32px;
+    color: #fff;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    input:not([type='submit']),
+    textarea {
+      width: 100%;
+      padding: 8px 0;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+
+    textarea {
+      height: 60px;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    input[type='submit'] {
+      align-self: flex-start;
+      padding: 10px 32px;
+      border-radius: 6px;
+      background-color: #0047ff;
+      border: 2px solid #0047ff;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #fff;
+        color: #0047ff;
+      }
+    }
+  }
+}

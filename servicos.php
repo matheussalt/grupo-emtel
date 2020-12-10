@@ -48,7 +48,7 @@ window.open('<?=$linkpage?>', '_parent');
       <img src="<?=$imagem_1?>" alt="<?=the_title()?>" />
     </div>
     <?php } else if ($imagem_3 == "") { ?>
-    <div class="servicos-img">
+    <div class="servicos-img" style="grid-template-columns: 1fr">
       <img src="<?=$imagem_1?>" alt="<?=the_title()?>" />
       <img src="<?=$imagem_2?>" alt="<?=the_title()?>" />
     </div>

@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-<section class="blog-banner">
+<section class="blog">
   <div class="container">
     <h2>Blog</h2>
 

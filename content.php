@@ -34,7 +34,7 @@
 			$categories = get_the_terms( $post->ID, 'category' );
 			
 			foreach( $categories as $category ) {
-					echo $category->name;
+        echo $category->name;
 			}
 			?>
     </h5>
@@ -43,7 +43,7 @@
     </a>
     <p><?=custom_excerpt2(100)?></p>
 
-    <a href="<?=the_permalink()?>">Ler mais</a>
+    <a href="<?=the_permalink()?>" class="link">Ler mais</a>
   </div>
 </div>
 

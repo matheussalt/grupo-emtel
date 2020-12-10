@@ -46,10 +46,10 @@ get_header(); ?>
 <section class="valores">
   <div class="container">
     <div class="valores-img">
-
+      <img src="<?=get_template_directory_URI()?>/img/src/valores.jpg">
     </div>
 
-    <div class="valroes-txt">
+    <div class="valores-txt">
       <div class="txt-bloco">
         <h2>Nossos valores </h2>
         <p>- Trabalhar com ética, honradez, vivacidade e resiliência, visando atender às expectativas dos clientes, aos

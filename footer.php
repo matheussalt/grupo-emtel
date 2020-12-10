@@ -12,14 +12,16 @@
 
 <footer class="footer">
   <div class="footer-section">
-    <div class="container">
-      <div class="footer-form">
+    <div class="footer-form">
+      <div class="container">
         <h2>Contato</h2>
 
         <? echo do_shortcode('[contact-form-7 id="23" title="Form footer"]'); ?>
       </div>
+    </div>
 
-      <div class="footer-dados">
+    <div class="footer-dados">
+      <div class="container">
         <h3>Se preferir, entre em contato</br>
           através destes canais</h3>
 
@@ -75,13 +77,19 @@
     </div>
   </div>
 
-  <div class="footer-section">
+  <div class="footer-menu">
     <div class="container">
       <img src="<?=get_template_directory_URI()?>/img/src/logo.png" alt="Logotipo Emtel" />
 
-      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuFooter', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+      <nav>
+        <h5>MENU</h5>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuFooter', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+      </nav>
 
-      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuServiços', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+      <nav>
+        <h5>Serviços</h5>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuServiços', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+      </nav>
     </div>
   </div>
 

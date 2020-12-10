@@ -77,6 +77,7 @@ add_filter('wpcf7_form_elements', function($content) {
     return $content;
 });
 
+
 function catch_that_image($sizex) {
   global $post, $posts;
   $urldosite = get_site_url();
@@ -116,9 +117,7 @@ function catch_that_image($sizex) {
   }
   return $first_img;
 }
-?>
 
-<?php
 if ( ! function_exists( 'twentythirteen_paging_nav' ) ) :
 /**
 * Display navigation to next/previous set of posts when applicable.

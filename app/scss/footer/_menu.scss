@@ -1,0 +1,37 @@
+.footer-menu {
+  width: 100%;
+  padding: 64px 0;
+  background-color: $black;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    img {
+      width: 160px;
+      margin-bottom: 16px;
+      align-self: center;
+    }
+
+    nav {
+      h5 {
+        margin-bottom: 8px;
+        color: #fff;
+        font-size: 10px;
+        font-weight: normal;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+      }
+
+      a {
+        display: block;
+        padding: 4px 0;
+        color: #ababab;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
+      }
+    }
+  }
+}

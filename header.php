@@ -28,28 +28,28 @@
 
   <link rel="icon" type="image/png" href="<?=get_template_directory_URI()?>/img/favicon.png" />
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="<?=get_template_directory_URI()?>/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="<?=get_template_directory_URI()?>/style.css" />
 
   <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
 
-  <div id="fb-root"></div>
-  <script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=243085426048812";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  </script>
+  <?php if (!is_front_page()) { ?>
+  <style>
+  .header {
+    background-color: #1f416d;
+  }
+
+  .empurra {
+    display: block;
+    height: 100px;
+  }
+  </style>
+  <?php } ?>
 
   <header class="header">
     <div class="container">
@@ -57,7 +57,7 @@
         <img src="<?=get_template_directory_URI()?>/img/src/logo.png" alt="Logotipo Grupo Emtel">
       </a>
 
-      <nav>
+      <nav class="menu" data-menu="menu">
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuTopo', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
       </nav>
 
@@ -66,3 +66,5 @@
       </div>
     </div>
   </header>
+
+  <div class="empurra"></div>
