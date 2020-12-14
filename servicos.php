@@ -44,16 +44,22 @@ window.open('<?=$linkpage?>', '_parent');
     ?>
 
     <?php if ($imagem_2 == "") { ?>
-    <div class="servicos-img" style="grid-template-columns: 1fr">
+    <div class="servicos-img img-um" style="grid-template-columns: 1fr">
       <img src="<?=$imagem_1?>" alt="<?=the_title()?>" />
     </div>
     <?php } else if ($imagem_3 == "") { ?>
-    <div class="servicos-img" style="grid-template-columns: 1fr">
+    <div class="servicos-img img-dois" style="grid-template-columns: 1fr">
       <img src="<?=$imagem_1?>" alt="<?=the_title()?>" />
       <img src="<?=$imagem_2?>" alt="<?=the_title()?>" />
     </div>
+    <?php } else if ($imagem_4 == "") { ?>
+    <div class="servicos-img img-tres">
+      <img src="<?=$imagem_1?>" alt="<?=the_title()?>" />
+      <img src="<?=$imagem_2?>" alt="<?=the_title()?>" />
+      <img src="<?=$imagem_3?>" alt="<?=the_title()?>" />
+    </div>
     <?php } else if ($imagem_4 != "") { ?>
-    <div class="servicos-img">
+    <div class="servicos-img img-quatro">
       <img src="<?=$imagem_1?>" alt="<?=the_title()?>" />
       <img src="<?=$imagem_2?>" alt="<?=the_title()?>" />
       <img src="<?=$imagem_3?>" alt="<?=the_title()?>" />

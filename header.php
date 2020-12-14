@@ -51,7 +51,7 @@
   </style>
   <?php } ?>
 
-  <header class="header">
+  <header class="header  <?php if (is_front_page()) { ?>fadeDown<?php } ?>" data-anima-tempo>
     <div class="container">
       <a href="<?=site_url()?>" class="header-logo">
         <img src="<?=get_template_directory_URI()?>/img/src/logo.png" alt="Logotipo Grupo Emtel">

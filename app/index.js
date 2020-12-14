@@ -4,5 +4,6 @@ import menu from './js/menu';
 import blog from './js/blog';
 import './js/modernizr';
 
+animacoes();
 menu();
 blog();

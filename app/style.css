@@ -160,12 +160,23 @@ h2 {
     display: flex;
     align-items: center; }
     .menu ul a {
+      position: relative;
       display: block;
       padding: 8px 16px;
       color: #fff;
       transition: 0.3s opacity; }
-      .menu ul a:hover {
-        opacity: 0.8; }
+      .menu ul a::before {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: 0.3s width; }
+      .menu ul a:hover::before {
+        width: 30px; }
     .menu ul .menu-item-45 {
       position: relative; }
       .menu ul .menu-item-45::before, .menu ul .menu-item-45::after {
@@ -187,6 +198,23 @@ h2 {
       background-color: #1f416d;
       opacity: 0;
       visibility: hidden; }
+      .menu ul .sub-menu a {
+        position: relative;
+        display: block;
+        width: 280px;
+        text-align: center; }
+        .menu ul .sub-menu a::before {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 0;
+          height: 2px;
+          background-color: #fff;
+          transition: 0.3s width; }
+        .menu ul .sub-menu a:hover::before {
+          width: 30px; }
   .menu-hamb {
     display: none; } }
 
@@ -626,6 +654,10 @@ h2 {
 .servicos-txt h2 {
   margin-bottom: 16px; }
 
+.servicos-txt .button {
+  margin-top: 32px;
+  display: inline-block; }
+
 .servicos-img {
   position: relative;
   width: 100%;
@@ -646,14 +678,20 @@ h2 {
     width: 100%; }
 
 @media screen and (min-width: 768px) {
-  .servicos .container {
-    display: grid;
-    grid-template-columns: 40% 1fr; }
+  .servicos {
+    padding: 128px; }
+    .servicos .container {
+      display: grid;
+      grid-template-columns: 40% 1fr;
+      max-width: 1200px; }
   .servicos-img {
-    height: 680px; }
-    .servicos-img img {
+    height: 540px;
+    align-items: center; }
+    .servicos-img.img-dois img, .servicos-img.img-tres img {
       height: 100%;
-      object-fit: cover; } }
+      object-fit: cover; }
+    .servicos-img.img-tres {
+      height: 720px; } }
 
 .blog {
   width: 100%;
@@ -871,6 +909,30 @@ h2 {
       font-size: 14px; }
       .rodape .container p a {
         color: #fff; }
+
+.fadeUp {
+  transform: translate3d(0, 30px, 0);
+  opacity: 0; }
+  .fadeUp.animar {
+    animation: reset 1s ease-out forwards; }
+
+.fadeDown {
+  transform: translate3d(0, -30px, 0);
+  opacity: 0; }
+  .fadeDown.animar {
+    animation: reset 1s ease-out forwards; }
+
+.fadeLeft {
+  transform: translate3d(30px, 0, 0);
+  opacity: 0; }
+  .fadeLeft.animar {
+    animation: reset 1s ease-out forwards; }
+
+.fadeRight {
+  transform: translate3d(-30px, 0, 0);
+  opacity: 0; }
+  .fadeRight.animar {
+    animation: reset 1s ease-out forwards; }
 
 @keyframes reset {
   to {

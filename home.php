@@ -18,13 +18,14 @@ get_header(); ?>
   <div class="container">
     <div class="home-banner-txt">
       <h1>
-        <strong>Emtel</strong>
-        <strong>grupo</strong>
+        <strong class="fadeLeft" data-anima-tempo>Emtel</strong>
+        <strong class="fadeRight" data-anima-tempo>grupo</strong>
       </h1>
 
-      <p>A Emtel é uma empresa que caminha na direção da inovação e do constante desenvolvimento, com competência e
+      <p class="fadeUp" data-anima-tempo>A Emtel é uma empresa que caminha na direção da inovação e do constante
+        desenvolvimento, com competência e
         qualidade.</p>
-      <a href="<?=site_url()?>/sobre" class="see-more">Saiba mais</a>
+      <a href="<?=site_url()?>/sobre" class="see-more fadeUp" data-anima-tempo>Saiba mais</a>
     </div>
 
     <div class="home-banner-midia">
@@ -51,10 +52,10 @@ get_header(); ?>
 
 <section class="home-success">
   <div class="container">
-    <h2>Nosso sucesso, </br>que se torna seu</h2>
+    <h2 class="fadeUp" data-animar>Nosso sucesso, </br>que se torna seu</h2>
 
     <div class="home-success-wrapper">
-      <div class="home-success-item">
+      <div class="home-success-item fadeUp" data-animar>
         <img src="<?=get_template_directory_URI()?>/img/src/sucesso_1.jpg" alt="Locação de frotas" />
 
         <div class="home-success-txt">
@@ -66,7 +67,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="home-success-item">
+      <div class="home-success-item fadeUp" data-animar>
         <img src="<?=get_template_directory_URI()?>/img/src/sucesso_2.jpg" alt="Locação de frotas" />
 
         <div class="home-success-txt">
@@ -79,7 +80,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="home-success-item">
+      <div class="home-success-item fadeUp" data-animar>
         <img src="<?=get_template_directory_URI()?>/img/src/sucesso_3.jpg" alt="Locação de frotas" />
 
         <div class="home-success-txt">
@@ -97,13 +98,14 @@ get_header(); ?>
 
 <section class="home-group">
   <div class="container">
-    <h5>GRUPO EMTEL</h5>
-    <h2>Conheça o</br> nosso grupo</h2>
-    <p>O crescimento da Emtel é contínuo e hoje somos referência nos ramos que atuamos. O compromisso com a ética,
+    <h5 class="fadeUp" data-animar>GRUPO EMTEL</h5>
+    <h2 class="fadeUp" data-animar>Conheça o</br> nosso grupo</h2>
+    <p class="fadeUp" data-animar>O crescimento da Emtel é contínuo e hoje somos referência nos ramos que atuamos. O
+      compromisso com a ética,
       melhoria contínua e qualidade é constante.</p>
 
     <div class="home-group-wrapper">
-      <div class="home-group-item">
+      <div class="home-group-item fadeUp" data-animar>
         <div class="home-group-txt">
           <img src="<?=get_template_directory_URI()?>/img/src/seminovos_logo.png" alt="Emtel Seminovos">
 
@@ -122,7 +124,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="home-group-item apoteose">
+      <div class="home-group-item apoteose fadeUp" data-animar>
         <div class="home-group-txt">
           <img src="<?=get_template_directory_URI()?>/img/src/apoteose_logo.png" alt="Apoteose Corretora de seguros">
 
@@ -140,7 +142,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="home-group-item">
+      <div class="home-group-item fadeUp" data-animar>
         <div class="home-group-txt">
           <img src="<?=get_template_directory_URI()?>/img/src/triasa_logo.png" alt="Triasa Veículos">
 
@@ -159,7 +161,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="home-group-item">
+      <div class="home-group-item fadeUp" data-animar>
         <div class="home-group-txt">
           <img src="<?=get_template_directory_URI()?>/img/src/asap_logo.png" alt="Asap">
 
@@ -178,7 +180,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="home-group-item app">
+      <div class="home-group-item app fadeUp" data-animar>
         <div class="home-group-txt">
           <img src="<?=get_template_directory_URI()?>/img/src/app_logo.png" alt="Carros para app">
 
@@ -202,10 +204,10 @@ get_header(); ?>
 
 <section class="home-blog">
   <div class="container">
-    <h5>ARTIGOS E NOTÍCIAS</h5>
-    <h2>Blog</h2>
+    <h5 class="fadeUp" data-animar>ARTIGOS E NOTÍCIAS</h5>
+    <h2 class="fadeUp" data-animar>Blog</h2>
 
-    <div class="home-blog-wrapper">
+    <div class="home-blog-wrapper fadeUp" data-animar>
       <? query_posts( array( 'post_type' => 'post', 'posts_per_page' => '3', 'cat' => '1' ) );  ?>
       <?php if ( have_posts() ) : ?>
       <?php while ( have_posts() ) : the_post(); ?>
@@ -253,17 +255,18 @@ get_header(); ?>
 <section class="home-about">
   <div class="container">
     <div class="home-about-txt">
-      <h2>Quem somos</h2>
-      <p>Com um jeito simples e cordial, a Emtel Logística enraizou uma cultura de respeito mútuo entre gestores e
+      <h2 class="fadeUp" data-animar>Quem somos</h2>
+      <p class="fadeUp" data-animar>Com um jeito simples e cordial, a Emtel Logística enraizou uma cultura de respeito
+        mútuo entre gestores e
         colaboradores, promovendo um ambiente sadio e altamente competente. Com um time que ama o que faz, a empresa
         encara os desafios e entrega os resultados. Confie em quem sabe o que faz!</br></br>
 
         Conheça mais um pouco sobre quem somos!</p>
 
-      <a href="<?=site_url()?>/sobre" class="button">Sobre a Emtel</a>
+      <a href="<?=site_url()?>/sobre" class="button fadeUp" data-animar>Sobre a Emtel</a>
     </div>
 
-    <div class="home-about-video">
+    <div class="home-about-video fadeUp" data-animar>
       <img src="<?=get_template_directory_URI()?>/img/src/quem_somos.jpg">
     </div>
   </div>
