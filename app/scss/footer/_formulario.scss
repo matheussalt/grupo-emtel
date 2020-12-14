@@ -48,5 +48,23 @@
         color: #0047ff;
       }
     }
+
+    .wpcf7-list-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-right: 8px;
+      }
+
+      span {
+        color: #fff;
+      }
+    }
+
+    .wpcf7-response-output {
+      color: #fff;
+    }
   }
 }

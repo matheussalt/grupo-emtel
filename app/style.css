@@ -815,6 +815,16 @@ h2 {
       .footer-form form input[type='submit']:hover {
         background-color: #fff;
         color: #0047ff; }
+    .footer-form form .wpcf7-list-item {
+      width: 100%;
+      display: flex;
+      align-items: center; }
+      .footer-form form .wpcf7-list-item input {
+        margin-right: 8px; }
+      .footer-form form .wpcf7-list-item span {
+        color: #fff; }
+    .footer-form form .wpcf7-response-output {
+      color: #fff; }
 
 .footer-dados {
   width: 100%;
