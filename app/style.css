@@ -817,10 +817,12 @@ h2 {
         color: #0047ff; }
     .footer-form form .wpcf7-list-item {
       width: 100%;
+      margin: 0;
       display: flex;
       align-items: center; }
       .footer-form form .wpcf7-list-item input {
-        margin-right: 8px; }
+        margin-right: 8px;
+        width: 30px; }
       .footer-form form .wpcf7-list-item span {
         color: #fff; }
     .footer-form form .wpcf7-response-output {
