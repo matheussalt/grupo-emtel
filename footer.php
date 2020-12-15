@@ -55,19 +55,19 @@
 
         <div class="footer-midias">
           <span>Siga-nos nas redes sociais</span>
-          <a href="https://facebook.com/" target="_blank">
+          <a href="https://www.facebook.com/grupoemtel" target="_blank">
             <svg width="32" height="32" viewBox="0 0 32 32">
               <use xlink:href="#facebook"></use>
             </svg>
           </a>
 
-          <a href="https://linkedin.com/" target="_blank">
+          <a href="https://www.linkedin.com/company/emtellogistica/" target="_blank">
             <svg width="32" height="32" viewBox="0 0 32 32">
               <use xlink:href="#linkedin"></use>
             </svg>
           </a>
 
-          <a href="https://instagram/" target="_blank">
+          <a href="https://www.instagram.com/grupoemtel/" target="_blank">
             <svg width="32" height="32" viewBox="0 0 32 32">
               <use xlink:href="#instagram"></use>
             </svg>
