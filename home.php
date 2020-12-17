@@ -63,7 +63,7 @@ get_header(); ?>
           <p>A Emtel é especializada em terceirização e gestão de frota. Nossos clientes encontram em uma só empresa o
             apoio que necessitam na terceirização e na gestão de sua frota.</p>
 
-          <a href="<?=site_url()?>/" class="see-more">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/locacao-de-frotas/" class="see-more">Saiba mais</a>
         </div>
       </div>
 
@@ -76,7 +76,7 @@ get_header(); ?>
             conservação predial, aprimoramento e otimização de espaços, implantação de metodologias novas de
             armazenagem, além de estudos gerais de melhoria contínua.</p>
 
-          <a href="<?=site_url()?>/" class="see-more">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/emtel-logistica/" class="see-more">Saiba mais</a>
         </div>
       </div>
 
@@ -89,7 +89,7 @@ get_header(); ?>
             a demanda do cliente. Possuímos frota com veículos rastreados e estamos investindo, cada vez mais, em
             soluções tecnológicas para a gestão da frota.</p>
 
-          <a href="<?=site_url()?>/" class="see-more">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/emtel-transporte/" class="see-more">Saiba mais</a>
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@ get_header(); ?>
             a
             qualidade, a procedência e superação das expectativas de seus clientes!</p>
 
-          <a href="<?=site_url()?>/" class="button">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/emtel-seminovos/" class="button">Saiba mais</a>
         </div>
 
         <div class="home-group-img">
@@ -131,7 +131,7 @@ get_header(); ?>
           <p>Fundada em 2017, a Apoteose Corretora de Seguros foi criada para atender às necessidades do Grupo Emtel
             (Empresa de Transportes Apoteose Ltda), entidade com mais de 26 anos de história.</p>
 
-          <a href="<?=site_url()?>/" class="button">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/apoteose/" class="button">Saiba mais</a>
         </div>
 
         <div class="home-group-img">
@@ -151,7 +151,7 @@ get_header(); ?>
             um
             pensamento totalmente inovador.</p>
 
-          <a href="<?=site_url()?>/" class="button">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/triasa-peugeot-e-citroen/" class="button">Saiba mais</a>
         </div>
 
         <div class="home-group-img">
@@ -170,7 +170,7 @@ get_header(); ?>
             conhecer a marca de tratores que mais cresce no Brasil. Venha ser um LS Tractor.
           </p>
 
-          <a href="<?=site_url()?>/" class="button">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/asap-ls-tractor/" class="button">Saiba mais</a>
         </div>
 
         <div class="home-group-img">
@@ -188,7 +188,7 @@ get_header(); ?>
             de
             aplicativos.</p>
 
-          <a href="<?=site_url()?>/" class="button">Saiba mais</a>
+          <a href="<?=site_url()?>/servicos/carros-para-app/" class="button">Saiba mais</a>
         </div>
 
         <div class="home-group-img">
