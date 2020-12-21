@@ -267,7 +267,9 @@ get_header(); ?>
     </div>
 
     <div class="home-about-video fadeUp" data-animar>
-      <img src="<?=get_template_directory_URI()?>/img/src/quem_somos.jpg">
+      <iframe src="https://www.youtube.com/embed/gsoAu-KK6gE" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
   </div>
 </section>

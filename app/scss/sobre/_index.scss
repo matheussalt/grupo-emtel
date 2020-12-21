@@ -29,8 +29,9 @@
   position: relative;
   width: 100%;
 
-  img {
+  iframe {
     width: 90%;
+    height: 180px;
   }
 
   &::before {
@@ -113,8 +114,12 @@
     display: flex;
     align-items: center;
 
+    iframe {
+      height: 340px;
+    }
+
     &::before {
-      height: 80%;
+      width: 90%;
     }
   }
 

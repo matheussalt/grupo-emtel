@@ -520,8 +520,9 @@ h2 {
   width: 100%;
   display: flex;
   align-items: center; }
-  .home-about-video img {
-    width: 100%; }
+  .home-about-video iframe {
+    width: 100%;
+    height: 100%; }
 
 @media screen and (min-width: 768px) {
   .home-about .container {
@@ -559,8 +560,9 @@ h2 {
 .sobre-video {
   position: relative;
   width: 100%; }
-  .sobre-video img {
-    width: 90%; }
+  .sobre-video iframe {
+    width: 90%;
+    height: 180px; }
   .sobre-video::before {
     content: '';
     position: absolute;
@@ -619,8 +621,10 @@ h2 {
   .sobre-video {
     display: flex;
     align-items: center; }
+    .sobre-video iframe {
+      height: 340px; }
     .sobre-video::before {
-      height: 80%; }
+      width: 90%; }
   .valores-img {
     align-items: center; }
     .valores-img::before {
